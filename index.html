@@ -44,7 +44,7 @@
         <section data-transition="slide-in fade-out" data-transition-speed="slow">
           <h3>How to exit</h3>
             <section>
-              <p> <span class="fragment">:</span><span class="fragment">q</span> <span class="fragment">!</span></p> 
+              <p> <span class="fragment">:</span><span class="fragment">q</span><span class="fragment">!</span></p>
             </section>
         </section>
 
@@ -259,11 +259,16 @@
 
           <section>
               <p>This will let you search and replace</p>
+              <p class="fragment"> run bash commands</p>
+              <p class="fragment"> save what you are working on</p>
+              <p class="fragment"> quit vim</p>
               <p class="fragment"> add line numbers</p>
-              <p class="fragment"> basic modify what you are looking at in the vim window</p>
+              <p class="fragment"> turn on syntax highlighting</p>
+              <p class="fragment"> basically modify what you are looking at in the vim window</p>
           </section>
 
           <section>
+            <h4>Search and Replace</h4>
               <pre>
                 <code>
                 :%s/foo/bar/g
@@ -275,15 +280,37 @@
           </section>
 
           <section>
+            <h4>Run bash commands</h4>
               <pre>
                 <code>
+                :! ls -la
+                </code>
+              </pre>
+          </section>
+
+          <section>
+            <h4>Save and quit</h4>
+              <pre>
+                <code>
+                :wq
+                :q!
+                :q
+                :x
+                </code>
+              </pre>
+          </section>
+
+          <section>
+            <h4>modify what your vim looks like</h4>
+              <pre>
+                <code>
+    syntax enable
+    syntax on
     set clipboard=unnamed
     set hls              " search with highlights by default
     set hlsearch
     set ignorecase
-    set noerrorbells     " No bells!
     set noswapfile
-    set novisualbell     " I said, no bells!
     set nowrap           " don't wrap lines
     set number
     set scrolloff=5      " adds top/bottom buffer between cursor and window
@@ -321,14 +348,13 @@
           <section>
           </section>
           <section>
-              <p> <span class="fragment">i </span><span class="fragment"> I </span> <span class="fragment"> a </span><span class="fragment"> A </span><span class="fragment"> o </span><span class="fragment"> O </span><span class="fragment"> C </span><span class="fragment"> cw </span><span class="fragment"> cc </span><span class="fragment"> ce </span><span class="fragment"> s </span><span class="fragment"> S </span></p> 
+              <p> <span>i </span><span class="fragment"> I </span> <span class="fragment"> a </span><span class="fragment"> A </span><span class="fragment"> o </span><span class="fragment"> O </span><span class="fragment"> C </span><span class="fragment"> cw </span><span class="fragment"> cc </span><span class="fragment"> ce </span><span class="fragment"> s </span><span class="fragment"> S </span></p>
           </section>
         </section>
 
         <section data-transition="slide-in fade-out" data-transition-speed="slow">
           <p>You can only get into these mode through normal mode</p>
           <p class="fragment"> you just press ESC to get back into normal mode from any of these other modes</p>
-          <p class="fragment"></p>
         </section>
 
         <section>
