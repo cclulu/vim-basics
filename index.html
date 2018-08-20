@@ -26,10 +26,12 @@
 			<div class="slides">
 
         <section>
-          <h2>Vim-Basics</h2>
-					<small>Cuahuctemoc Osorio (Temo)</small><br/>
-					<small>github.com/cclulu</small><br/>
-					<small>VIM Modes</small><br/>
+          <h1>Vim-Basics</h1>
+          <section>
+            <h3>VIM Modes</h3><br/>
+            <small>Cuahuctemoc Osorio (Temo)</small><br/>
+            <small>github.com/cclulu</small><br/>
+          </section>
         </section>
 
         <section data-transition="slide-in fade-out" data-transition-speed="slow">
@@ -59,9 +61,9 @@
           <h3>Onto to the really topic</h3>
             <section>
             </section>
-            <section>
-              breakfast
-            </section>
+            <!-- <section> -->
+            <!--   breakfast -->
+            <!-- </section> -->
             <section>
               Vim Modes
             </section>
@@ -87,7 +89,7 @@
               <img src="res/images/visual_plugin.png" >
             </section>
             <section>
-              <p>Execute</p>
+              <p>Command Line</p>
               <img src="res/images/Ex.png" >
               <img src="res/images/Ex_plugin.png" >
             </section>
@@ -112,11 +114,22 @@
         </section>
 
         <section data-transition="slide-in fade-out" data-transition-speed="slow">
-            <h3>How do go into normal mode?</h3>
+          <h3>How do go into normal mode?</h3>
           <section>
           </section>
           <section>
               <p> <span>Just open it</span><span class="fragment">...</span> <span class="fragment">or press ESC</span></p> 
+          </section>
+        </section>
+
+        <section data-transition="slide-in fade-out" data-transition-speed="slow">
+          <h2>Basic Movements</h2>
+          <section>
+          </section>
+          <section>
+            <h3><span> h </span><span class="fragment"> j </span><span class="fragment"> k </span><span class="fragment"> l </span></h3>
+            <small class="fragment">you could also use arrows.... </small>
+            <small class="fragment">sometimes</small>
           </section>
         </section>
 
@@ -175,7 +188,7 @@
         </section>
 
         <section data-transition="slide-in fade-out" data-transition-speed="slow">
-          <h3>V</h3>
+          <h3>CTRL-v</h3>
           <section>
           </section>
           <section>
@@ -202,7 +215,92 @@
             <h3>What can this one do?</h3>
           </section>
           <section>
-            Let you run commands to modify the current vim session you are using
+            <p>Lets you search and replace, run bash commands and Ex commands</p>
+          </section>
+        </section>
+
+        <section data-transition="slide-in fade-out" data-transition-speed="slow">
+          <h3>How do go into Command line mode?</h3>
+          <section>
+          </section>
+          <section>
+              <p> <span>: </span></p> 
+              <p class="fragment"> <span> /</span><span class="fragment"> ? </span></p>
+              <p class="fragment"> <span>There is a </span> <span class="fragment">MAJOR </span> <span class="fragment">difference between the 2 sets </span></p> 
+          </section>
+        </section>
+
+        <section data-transition="slide-in fade-out" data-transition-speed="slow">
+          <h3>/ ?</h3>
+          <section>
+          </section>
+          <section>
+              <p>This one lets you search using REGEX </p>
+              <p class="fragment"> it will register every instance of your search </p>
+              <p class="fragment"> and you can go back and forth with n (forward) and N (backward)</p>
+          </section>
+          <section>
+              <pre>
+               <code>
+
+               /.*_test
+               ?.*_test
+
+               </code>
+              </pre>
+          </section>
+
+        </section>
+
+        <section data-transition="slide-in fade-out" data-transition-speed="slow">
+          <h3>:</h3>
+          <section>
+          </section>
+
+          <section>
+              <p>This will let you search and replace</p>
+              <p class="fragment"> add line numbers</p>
+              <p class="fragment"> basic modify what you are looking at in the vim window</p>
+          </section>
+
+          <section>
+              <pre>
+                <code>
+                :%s/foo/bar/g
+                :s/foo/bar/g
+                :%s/foo/bar/gc
+                :%s/foo/bar/gi
+                </code>
+              </pre>
+          </section>
+
+          <section>
+              <pre>
+                <code>
+    set clipboard=unnamed
+    set hls              " search with highlights by default
+    set hlsearch
+    set ignorecase
+    set noerrorbells     " No bells!
+    set noswapfile
+    set novisualbell     " I said, no bells!
+    set nowrap           " don't wrap lines
+    set number
+    set scrolloff=5      " adds top/bottom buffer between cursor and window
+    set smartindent      " enable smart indentation
+    set undofile
+    set undodir=~/.vim/undodir
+                </code>
+              </pre>
+          </section>
+        </section>
+
+        <section data-transition="slide-in fade-out" data-transition-speed="slow">
+          <section>
+            <p><span>You are probably wondering </span><span class="fragment">"How do I actually start editting Text?"</span></p>
+          </section>
+          <section>
+            <p>With Insert Mode</p>
           </section>
         </section>
 
@@ -214,21 +312,28 @@
             <h3>What does it do?</h3>
           </section>
           <section>
-            Lets you start typing
+            Lets you start editting the text
           </section>
         </section>
 
         <section data-transition="slide-in fade-out" data-transition-speed="slow">
+          <h3>Getting into Insert Mode</h3>
           <section>
           </section>
+          <section>
+              <p> <span class="fragment">i </span><span class="fragment"> I </span> <span class="fragment"> a </span><span class="fragment"> A </span><span class="fragment"> o </span><span class="fragment"> O </span><span class="fragment"> C </span><span class="fragment"> cw </span><span class="fragment"> cc </span><span class="fragment"> ce </span><span class="fragment"> s </span><span class="fragment"> S </span></p> 
+          </section>
         </section>
 
         <section data-transition="slide-in fade-out" data-transition-speed="slow">
+          <p>You can only get into these mode through normal mode</p>
+          <p class="fragment"> you just press ESC to get back into normal mode from any of these other modes</p>
+          <p class="fragment"></p>
         </section>
 
-        <section data-transition="slide-in fade-out" data-transition-speed="slow">
+        <section>
+          <p> <span>Thats it</span> <span class="fragment">... for now</span> </p>
         </section>
-
 			</div>
 		</div>
 
